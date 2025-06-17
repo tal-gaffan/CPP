@@ -1,11 +1,13 @@
 #include <iostream>
 
+
+constexpr int SUCCESS_CODE = 0;
+constexpr int FAIL_CODE = 1;
+
+
 using std::cout;
 using std::cin;
 using std::endl;
-
-#define SUCCESS_CODE 0;
-#define FAIL_CODE 1;
 
 
 int main() {

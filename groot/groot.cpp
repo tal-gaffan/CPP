@@ -1,14 +1,11 @@
 #include <iostream>
 
-
 using std::cout;
 using std::cin;
 using std::endl;
 
-
 constexpr int SUCCESS_CODE = 0;
 constexpr int FAIL_CODE = 1;
-
 
 int main() {
 	cout << "Please enter number: " << endl;

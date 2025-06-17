@@ -1,9 +1,12 @@
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
-const int SUCCESS_CODE = 0;
-const int FAIL_CODE = 1;
+#define SUCCESS_CODE 0;
+#define FAIL_CODE 1;
+
 
 int main() {
 	cout << "Please enter number: " << endl;
@@ -13,8 +16,7 @@ int main() {
 	if (cin.fail()) {
 		cout << "Make sure to enter an integer!" << endl;
 		return FAIL_CODE;
-	}
-	else if (num < 0) {
+	} else if (num < 0) {
 		cout << "Make sure to enter a non-negative integer!" << endl;
 		return FAIL_CODE;
 	}

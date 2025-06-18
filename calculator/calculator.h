@@ -3,9 +3,6 @@
 #define INVALID_OPERATOR "Invalid Operator!"
 #define DIVISION_BY_ZERO "Divison by Zero!"
 
-using std::string;
-using std::runtime_error;
-
 constexpr char ADD = '+';
 constexpr char SUBTRACT = '-';
 constexpr char MULTIPLY = '*';
@@ -22,13 +19,13 @@ public:
 };
 
 // Invalid Operation Exception class
-class InvalidOperatorException : public runtime_error{
+class InvalidOperatorException : public std::runtime_error{
 public:
-	explicit InvalidOperatorException(const string& message) : runtime_error(message) {}
+	explicit InvalidOperatorException(const std::string& message);
 };
 
 // Division By Zero Exception Class
-class DivisionByZeroException : public runtime_error {
+class DivisionByZeroException : public std::runtime_error {
 public:
-	explicit DivisionByZeroException(const string& message) : runtime_error(message) {}
+	explicit DivisionByZeroException(const std::string& message);
 };

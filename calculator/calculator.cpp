@@ -1,5 +1,16 @@
 #include "calculator.h"
 
+using std::runtime_error;
+using std::string;
+
+// Implementation of Invalid Operator Exception
+// Constructor
+InvalidOperatorException::InvalidOperatorException(const string& message) : runtime_error(message) {}
+
+// Implementation of Division by Zero Exception
+// Constructor
+DivisionByZeroException::DivisionByZeroException(const string& message) : runtime_error(message) {}
+
 // Implementation of Calculator class
 // returns x + y
 double Calculator::add(double x, double y) {

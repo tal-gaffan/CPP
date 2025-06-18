@@ -2,6 +2,8 @@
 
 #include "optimusPrime.h"
 
+#define BARRIER ','
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -29,7 +31,7 @@ void printArray(int arr[], int length) {
 		cout << arr[i];
 
 		if (i != length - 1) {
-			cout << ',';
+			cout << BARRIER;
 		}
 	}
 	cout << endl;

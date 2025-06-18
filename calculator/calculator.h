@@ -19,3 +19,25 @@ public:
 
 	double calculate(double x, char op, double y);
 };
+
+// Invalid Operation Exception class
+class InvalidOperatorException {
+public:
+	InvalidOperatorException();
+
+	string errorMessage();
+
+private:
+	const string m_errorMsg;
+};
+
+// Division By Zero Exception Class
+class DivisionByZeroException {
+public:
+	DivisionByZeroException();
+
+	string errorMessage();
+
+private:
+	const string m_errorMsg;
+};

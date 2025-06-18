@@ -1,16 +1,6 @@
 #include "calculator.h"
 
-// Invalid Operation Exception class and implementation
-class InvalidOperatorException {
-public:
-	InvalidOperatorException();
-
-	string errorMessage();
-
-private:
-	const string m_errorMsg;
-};
-
+// Invalid Operator Exception implementation
 // Constructor implementation
 InvalidOperatorException::InvalidOperatorException() : m_errorMsg(INVALID_OPERATOR) {}
 
@@ -19,17 +9,7 @@ string InvalidOperatorException::errorMessage() {
 	return this->m_errorMsg;
 }
 
-// Division By Zero Exception Class and Implementation
-class DivisionByZeroException {
-public:
-	DivisionByZeroException();
-
-	string errorMessage();
-
-private:
-	const string m_errorMsg;
-};
-
+// Division by Zero Exception implementation
 // Constructor implementation
 DivisionByZeroException::DivisionByZeroException() : m_errorMsg(DIVISION_BY_ZERO) {}
 

@@ -124,13 +124,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="calculator.cpp" />
-    <ClCompile Include="DivisionByZeroException.cpp" />
-    <ClCompile Include="InvaildOperatorException.h" />
-    <ClCompile Include="InvalidOperatorException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calculator.h" />
-    <ClInclude Include="DivisionByZeroException.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

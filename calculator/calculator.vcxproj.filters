@@ -18,21 +18,9 @@
     <ClCompile Include="calculator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DivisionByZeroException.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InvaildOperatorException.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InvalidOperatorException.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calculator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DivisionByZeroException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

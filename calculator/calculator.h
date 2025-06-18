@@ -10,7 +10,7 @@ constexpr char SUBTRACT = '-';
 constexpr char MULTIPLY = '*';
 constexpr char DIVIDE = '/';
 
-class Calculator {
+class Calculator : public std::exception{
 public:
 	double add(double x, double y);
 	double subtract(double x, double y);
@@ -21,7 +21,7 @@ public:
 };
 
 // Invalid Operation Exception class
-class InvalidOperatorException {
+class InvalidOperatorException : public std::exception{
 public:
 	InvalidOperatorException();
 

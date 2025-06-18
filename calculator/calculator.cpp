@@ -1,23 +1,5 @@
 #include "calculator.h"
 
-// Invalid Operator Exception implementation
-// Constructor implementation
-InvalidOperatorException::InvalidOperatorException() : m_errorMsg(INVALID_OPERATOR) {}
-
-// errorMessage implementation
-string InvalidOperatorException::errorMessage() {
-	return this->m_errorMsg;
-}
-
-// Division by Zero Exception implementation
-// Constructor implementation
-DivisionByZeroException::DivisionByZeroException() : m_errorMsg(DIVISION_BY_ZERO) {}
-
-// errorMessage implementation
-string DivisionByZeroException::errorMessage() {
-	return this->m_errorMsg;
-}
-
 // Implementation of Calculator class
 // returns x + y
 double Calculator::add(double x, double y) {
@@ -37,7 +19,7 @@ double Calculator::multiply(double x, double y) {
 // returns x / y
 double Calculator::divide(double x, double y) {
 	if (y == 0) {
-		throw DivisionByZeroException();
+		throw DivisionByZeroException(DIVISION_BY_ZERO);
 	}
 	return x / y;
 }
@@ -54,19 +36,6 @@ double Calculator::calculate(double x, char op, double y) {
 	case DIVIDE:
 		return divide(x, y);
 	default:
-		throw InvalidOperatorException();
-	}
-}
-
-int main() {
-	Calculator calc;
-	try {
-		std::cout << calc.calculate(21, '%', 0);
-	}
-	catch (DivisionByZeroException err) {
-		std::cout << err.errorMessage() << std::endl;
-	}
-	catch (InvalidOperatorException err) {
-		std::cout << err.errorMessage() << std::endl;
+		throw InvalidOperatorException(INVALID_OPERATOR);
 	}
 }

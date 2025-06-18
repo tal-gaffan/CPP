@@ -4,13 +4,14 @@
 #define DIVISION_BY_ZERO "Divison by Zero!"
 
 using std::string;
+using std::runtime_error;
 
 constexpr char ADD = '+';
 constexpr char SUBTRACT = '-';
 constexpr char MULTIPLY = '*';
 constexpr char DIVIDE = '/';
 
-class Calculator : public std::exception{
+class Calculator {
 public:
 	double add(double x, double y);
 	double subtract(double x, double y);
@@ -21,23 +22,13 @@ public:
 };
 
 // Invalid Operation Exception class
-class InvalidOperatorException : public std::exception{
+class InvalidOperatorException : public runtime_error{
 public:
-	InvalidOperatorException();
-
-	string errorMessage();
-
-private:
-	const string m_errorMsg;
+	explicit InvalidOperatorException(const string& message) : runtime_error(message) {}
 };
 
 // Division By Zero Exception Class
-class DivisionByZeroException {
+class DivisionByZeroException : public runtime_error {
 public:
-	DivisionByZeroException();
-
-	string errorMessage();
-
-private:
-	const string m_errorMsg;
+	explicit DivisionByZeroException(const string& message) : runtime_error(message) {}
 };

@@ -8,8 +8,8 @@ constexpr int SUCCESS_CODE = 0;
 constexpr int FAIL_CODE = 1;
 
 int main() {
-	cout << "Please enter number: " << endl;
 	int num = 0;
+	cout << "Please enter number: " << endl;
 	cin >> num;
 
 	if (cin.fail()) {
